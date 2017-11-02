@@ -15,13 +15,13 @@ alias gst="git status"
 alias gaa="git add --all"
 alias gfa="git fetch --all"
 
-alias projs='_gotoProject'
+alias proj='_gotoProject'
 _gotoProject() {
 
 	local projectsDirectory='Sites/projects/';
 	local userPath='/Users/sahusoft/';
 	if [ $# -eq 0 ]; then
-		printf '\n\tProject folder name is required!\n\tSample Command - (projs project_folder_name)\n\n';
+		cd $projectsDirectory$1;
 	else
 		local projectPath=$projectsDirectory$1;
 		if [ -d "$userPath$projecPath" ]; then
